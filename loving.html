@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allgood</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- END CSS -->
+    <!-- ICON -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- END ICON -->
+
+    <!-- CSS SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- END CSS SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- or directly from unpkg -->
+
+    <style>
+        .transition-fade {
+            transition: 0.4s !important;
+            opacity: 1 !important;
+        }
+
+        .is-animating .transition-fade {
+            opacity: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="as_nav_top">
+        <div class="links_top">
+            <ul>
+                <li class="locations">
+                    <a href="#">
+                        <box-icon class="icons_loca" name='current-location'></box-icon>Joylashuv
+                    </a>
+                </li>
+                <li><a href="#">
+                        Bizning do'konlarmiz
+                    </a>
+                </li>
+                <li><a href="#">
+                        Muddatli to'lovga sotib olish
+                    </a>
+                </li>
+                <li><a href="#">
+                        To'lov usullari
+                    </a>
+                </li>
+                <li><a href="#">
+                        Maxsulotlar uchun kafolatlar
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#" class="call_opener">Aloqa markazi:</a></li>
+                <li class="lang_sections">
+                    <span class="material-symbols-outlined lang">
+                        g_translate
+                    </span>
+                    <select>
+                        <option value="">UZB</option>
+                        <option value="">RU</option>
+                        <option value="">ENG</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav id="navbar_fix">
+        <section class="navbar">
+            <img src="./allgood.png" class="logo" width="120px">
+            <div class="inp">
+                <input type="text" placeholder="Qidirish" class="searchCl">
+                <span class="material-symbols-outlined search1">
+                    search
+                </span>
+            </div>
+            <ul class="icon_link">
+                <li>
+                    <a href="#" class="as_btn1"><span class="material-symbols-outlined">login</span>Login</a>
+                </li>
+                <div class="login_modal">
+                    <div class="login_container">
+                        <form>
+                            <div class="opener_closer">
+                                <span class="material-symbols-outlined">
+                                    close
+                                </span>
+                            </div>
+                            <input type="radio" id="rad-1" name="tabs" checked>
+                            <label for="rad-1" class="tab00 tab-1">Kirish</label>
+                            <input type="radio" id="rad-2" name="tabs"><label for="rad-2" class="tab00 tab-2">Roýxatdan o'tish</label>
+
+                            <fieldset class="tab-1-content">
+                                <div class="boxinp">
+                                    <input type="number" placeholder="Telefon raqam" required>
+                                    <button class="btn">Telefon orqali kirish</button>
+                                </div>
+                            </fieldset>
+                    
+                            <fieldset class="tab-2-content">
+                                <div class="boxinp">
+                                    <input type="number" placeholder="Telefon raqam"required>
+                                    <input type="text" placeholder="Ism" required>
+                                    <input type="text" placeholder="Familiya" required>
+                                    <button class="btn">Ro'yxatdan o'tish</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <li>
+                    <a href="./compare.html"><span class="material-symbols-outlined">compare_arrows</span>Taqqoslash</a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined">favorite</span>Sevimlilar</a>
+                </li>
+                <li>
+                    <a href="#" class="shop_btn">
+                        <span class="material-symbols-outlined">shopping_basket</span>Savatcha</a>
+                </li>
+                <div class="shop_section">
+                    <div class="shop_container">
+                        <div class="opener_closer1">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </div>
+                        <h2>Hozir xarid qilish</h2>
+                        <span class="material-symbols-outlined">shopping_basket</span>
+                        <i>Savatchada xozirda
+                            hech nima yo'q!</i>
+                        <a href="#">Harid qilish</a>
+                    </div>
+                </div>
+            </ul>
+            <div class="btns">
+                <h3 class="catalog"><span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined">
+                            widgets
+                        </span>
+                    </span>Katalog
+                </h3>
+                <div class="menu_btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </section>
+    </nav>
+    <mian id="swup" class="transition-fade">
+        <div class="container">
+            <div class="container">
+                <p class="text"></p>
+                <div class="tab">
+                    <button class="tablinks" onmouseenter="openTab(event, 'list1', 'arrow1')" id="defaultOpen">
+                        <i class="fas fa-laptop-code"></i>
+                        <span class="material-symbols-outlined">
+                            smartphone
+                        </span>
+                        <p>Maishiy texnika</p>
+                        <span id="arrow1" class="arrow fas fa-caret-right"></span>
+                    </button>
+
+                    <button class="tablinks" onmouseenter="openTab(event, 'list2', 'arrow2')">
+                        <i class="fab fa-wordpress"></i>
+                        <span class="material-symbols-outlined">
+                            print
+                        </span>
+                        <p>Ofis jihozlari</p>
+                        <span id="arrow2" class=" arrow fas fa-caret-right"></span>
+                    </button>
+
+                    <button class="tablinks" onmouseenter="openTab(event, 'list3', 'arrow3')">
+                        <i class="fas fa-video"></i>
+                        <span class="material-symbols-outlined">
+                            microwave
+                        </span>
+                        <p>Oshxona jihozlari</p>
+                        <span id="arrow3" class=" arrow fas fa-caret-right"></span>
+                    </button>
+
+                    <button class="tablinks" onmouseenter="openTab(event, 'list4', 'arrow4')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            home_repair_service
+                        </span>
+                        <p>Uy uchun</p>
+                        <span id="arrow4" class=" arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list5', 'arrow5')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            engineering
+                        </span>
+                        <p>Avtomabil uchun mahsulotlar</p><span id="arrow5" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list6', 'arrow6')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            tv_gen
+                        </span>
+                        <p>Televizorlar va telekanallar</p>
+                        <span id="arrow6" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list7', 'arrow7')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            phone_iphone
+                        </span>
+                        <p>Telefonlar va gadjetlar</p>
+                        <span id="arrow7" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list8', 'arrow7')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            fitness_center
+                        </span>
+                        <p>Sport va sevimli mashgulotlar</p>
+                        <span id="arrow7" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list9', 'arrow7')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            laptop_mac
+                        </span>
+                        <p>Kompyuter texnikasi</p>
+                        <span id="arrow7" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list10', 'arrow7')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            sports_esports
+                        </span>
+                        <p>O'yin konsollari</p>
+                        <span id="arrow7" class="arrow fas fa-caret-right"></span>
+                    </button>
+                    <button class="tablinks" onmouseenter="openTab(event, 'list11', 'arrow7')">
+                        <i class="far fa-image"></i>
+                        <span class="material-symbols-outlined">
+                            child_care
+                        </span>
+                        <p>Bolalar uchun mahsulotlar</p>
+                        <span id="arrow7" class="arrow fas fa-caret-right"></span>
+                    </button>
+                </div>
+                
+                <div class="inber_tabs">
+                    <div id="list1" class="tabcontent">
+                        <h2>Maishiy texnika</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list2" class="tabcontent">
+                        <h2>Ofis jihozlari</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list3" class="tabcontent">
+                        <h2>Oshxona jihozlari</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list4" class="tabcontent">
+                        <h2>Uy uchun</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list5" class="tabcontent">
+                        <h2>Avtomabil uchun mahsulotlar</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list6" class="tabcontent">
+                        <h2>Televizorlar va telekanallar</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list7" class="tabcontent">
+                        <h2>Telefonlar va gadjetlar</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list8" class="tabcontent">
+                        <h2>Maishiy texnika</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list9" class="tabcontent">
+                        <h2>Maishiy texnika</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list10" class="tabcontent">
+                        <h2>Maishiy texnika</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="list11" class="tabcontent">
+                        <h2>Maishiy texnika</h2>
+                        <div class="categories_list">
+                            <ul>
+                                <li class="act_catalog">TIKUV MASHINALARI</li>
+                                <li><a href="#">Chaynak</a></li>
+                                <li><a href="#">Aurora</a></li>
+                                <li><a href="#">Janome</a></li>
+                                <li><a href="#">Bernette</a></li>
+                                <li><a href="#">Overloklar</a></li>
+                                <li><a href="#">Tikuv mashina to'plamlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">BUG' GENERATORLARI</li>
+                                <li><a href="#">Elektr bug' generatorlari</a></li>
+                                <li><a href="#">Rowenta bug' generatorlari</a></li>
+                                <li><a href="#">Philips bug' generatorlari</a></li>
+                                <li><a href="#">Braun bug' generatorlari</a></li>
+                                <li><a href="#">Bosch bug' generatorlari</a></li>
+                                <li><a href="#">Tefal bug' generatorlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">SIMSIZ CHANGYUTGICH</li>
+                                <li><a href="#">Vertikal simsiz changyutgichlar</a></li>
+                                <li><a href="#">Uy uchun</a></li>
+                                <li><a href="#">Polaris changyutgichlari</a></li>
+                                <li><a href="#">Philips changyutgichlari</a></li>
+                                <li><a href="#">LG changyutgichlari</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KULERLAR</li>
+                                <li><a href="#">Dispenserlar</a></li>
+                                <li><a href="#">Vital</a></li>
+                                <li><a href="#">Bona</a></li>
+                            </ul>
+                            <ul>
+                                <li class="act_catalog">KIR YUVISH MASHINALARI</li>
+                                <li><a href="#">Barcha kir yuvish mashinalari</a></li>
+                                <li><a href="#">Whirlpool kir yuvish mashinalari</a></li>
+                                <li><a href="#">Electrolux kir yuvish mashina</a></li>
+                                <li><a href="#">Samsung kir yuvish mashinalari</a></li>
+                                <li><a href="#">Indesit kir yuvish mashinalari</a></li>
+                            </ul>
+                            <ul class="nature">
+                                <li class="act_catalog">CHANGYUTGICHLAR</li>
+                                <li><a href="#">Barcha changyutgichlar</a></li>
+                                <li><a href="#">Gorenje changyutgichlar</a></li>
+                                <li><a href="#">Philips changyutgichlar</a></li>
+                                <li><a href="#">Avalon changyutgichlar</a></li>
+                                <li><a href="#">Bosch changyutgichlar</a></li>
+                                <li><a href="#">Konig changyutgichlar</a></li>
+                                <li><a href="#">Tefal changyutgichlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mian>
+
+    <div class="thrid_nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        local_fire_department
+                    </span>
+                Aksiyalar</a>
+            </li>
+            <li><a href="#">Smartfonlar</a></li>
+            <li><a href="#">Muzlatgichlar</a></li>
+            <li><a href="#">Changyutgichlar</a></li>
+            <li><a href="#">Xavo sovutgichlar</a></li>
+            <li><a href="#">Noutbuklar</a></li>
+            <li><a href="#">Televizor</a></li>
+            <li><a href="#">Kir yuvish mashinasi</a></li>
+        </ul>
+    </div>
+    <div class="navigation_links">
+        <ul>
+            <li><a href="./index.html" class="actlink">Bosh sahifa</a></li>
+            <li><a href="#" >Sevimlilar</a></li>
+        </ul>
+    </div>
+    <h1 class="navigate">Sevimlilar</h1>
+    <div class="container_loving">
+        <span class="material-symbols-outlined">
+            volunteer_activism
+        </span>
+        <h2>Sevimlilar roʻyxati boʻsh</h2>
+        <i>Ma'qul kelgan maxsulotlarni keyinroq ko'rish yoki harid qilish uchun sevimlilar ro'yxatiga kiriting.</i>
+        <a href="./index.html">Asosiy sahifaga qaytish</a>
+    </div>
+    
+    <h1 class="navigate">Yaqinda ko`rib chiqilgan mahsulotlar</h1>
+    <div class="kotalogs_begin">
+        <div class="carousel" data-flickity='{ "contain": true ,"pageDots": false }'>
+            <div class="carousel-cell height_card">
+                <!-- <div class="new_products">
+                    <p>Zo'r narx</p>
+                </div> -->
+                <ul>
+                    <li>
+                        <img src="1 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <a href="#">Iphone: Apple 14 pro Pushti 128GB <i>ko'rish</i>...</a>
+                    </li>
+                    <li>Narxi: 28 000 000 so'm</li>
+                    <li class="last_links">
+                        <ul>
+                            <li class="basket">
+                                <span class="material-symbols-outlined">shopping_basket</span>
+                                <a href="">Savatcha</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined icons_size">favorite</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="carousel-cell height_card">
+                <!-- <div class="new_products">
+                    <p>Zo'r narx</p>
+                </div> -->
+                <ul>
+                    <li>
+                        <img src="/1 (2).webp" alt="">
+                    </li>
+                    <li>
+                        <a href="#">Iphone: Apple 14 pro Pushti 128GB <i>ko'rish</i>...</a>
+                    </li>
+                    <li>Narxi: 28 000 000 so'm</li>
+                    <li class="last_links">
+                        <ul>
+                            <li class="basket">
+                                <span class="material-symbols-outlined">shopping_basket</span>
+                                <a href="">Savatcha</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined icons_size">favorite</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="carousel-cell height_card">
+                <!-- <div class="new_products">
+                    <p>Zo'r narx</p>
+                </div> -->
+                <ul>
+                    <li>
+                        <img src="/1 (3).webp" alt="">
+                    </li>
+                    <li>
+                        <a href="#">Iphone: Apple 14 pro Pushti 128GB <i>ko'rish</i>...</a>
+                    </li>
+                    <li>Narxi: 28 000 000 so'm</li>
+                    <li class="last_links">
+                        <ul>
+                            <li class="basket">
+                                <span class="material-symbols-outlined">shopping_basket</span>
+                                <a href="">Savatcha</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined icons_size">favorite</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- ICON -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- END_ICON -->
+    <!-- Main js -->
+    <script src="main.js"></script>
+    <!-- END Main js -->
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                autoplay: true,
+            },
+        });
+
+    </script>
+    <!-- ENDswiper -->
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script>
+        const swup = new Swup(); 
+    </script>
+</body>
+
+</html>
